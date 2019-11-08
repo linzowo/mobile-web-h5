@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(), // 每次编译后会先清空输出文件夹
-    new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({ // 配置编译后生成的index。html文件相关信息
       title: "Output Management",
       template: 'src/index.html'
     }), // 输出的html文件的相关配置信息

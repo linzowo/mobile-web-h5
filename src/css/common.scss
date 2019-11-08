@@ -1,0 +1,33 @@
+// 公共样式
+
+// 通过媒体查询控制容器大小，超过768后全部为720
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+//   容器设置
+
+.container {
+    background-color: red;
+    height: 800px;
+  }
