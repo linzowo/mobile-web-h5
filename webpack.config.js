@@ -13,9 +13,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(), // 每次编译后会先清空输出文件夹
-    new HtmlWebpackPlugin({ // 配置编译后生成的index。html文件相关信息
+    new HtmlWebpackPlugin({
+      // 配置编译后生成的index。html文件相关信息
       title: "Output Management",
-      template: 'src/index.html'
+      template: "html-loader!src/index.html" // 通过加入html-loader！标签指定在使用模板时先通过html-loader编译，解决图片等外部资源引入路径问题
     }), // 输出的html文件的相关配置信息
     // 模块热替换相关插件
     new webpack.NamedModulesPlugin(),
@@ -43,8 +44,16 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"] // 处理图片的加载器
+        // 处理图片的loader
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192 // 控制多大的图片进行base64处理
+            }
+          }
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,

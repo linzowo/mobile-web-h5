@@ -28,6 +28,13 @@
 //   容器设置
 
 .container {
-    background-color: red;
+    background-color: #292c3d;
     height: 800px;
+    margin: 0 auto;
+
+    .title{
+        width: 100%;
+        height: 200px;
+        background-color: orange;
+    }
   }
