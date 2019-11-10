@@ -1,40 +1,66 @@
 // 公共样式
 
+/* 
+一些基本问题的注释
+原始设计稿件的大小为 1080*1920px
+现在为了适配移动端设备，采用rem作为大小单位
+因此人为的将原设计稿划分为30分每份尺寸为36*64px
+任何通过媒体查询动态查询将html的字体大小设置为1/30
+*/
+
+// 基础样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 // 通过媒体查询控制容器大小，超过768后全部为720
 @media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
+  .container {
+    max-width: 540px;
   }
-  
-  @media (min-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
   }
-  
-  @media (min-width: 992px) {
-    .container {
-      max-width: 720px;
-    }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 720px;
   }
-  
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 720px;
-    }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 720px;
   }
+}
 
 //   容器设置
 
 .container {
-    background-color: #292c3d;
-    height: 800px;
-    margin: 0 auto;
+  font-size: 16px; // 重置从html继承来的字体大小
+  background-color: #292c3d;
+  height: 800px;
+  margin: 0 auto;
+  border-top: 1px solid #ccc;
 
-    .title{
-        width: 100%;
-        height: 200px;
-        background-color: orange;
+  .title {
+    // width: 100%;
+    // background-color: orange;
+    // padding: 1.2rem;
+    // padding-bottom: 0;
+    margin: 1.2rem;
+
+    img {
+      // width: 23.5rem;
+      width: 100%;
+      // margin: 1.2rem 1.2rem 0;
+      height: auto;
     }
   }
+}
