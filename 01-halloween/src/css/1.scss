@@ -1,4 +1,6 @@
 // 第一页样式设置
+
+// 顶部标题区域开始
 .title {
   margin-top: 3.23rem;
   margin-left: 2.3rem;
@@ -9,8 +11,32 @@
     height: auto;
   }
 
-  .sub-title{
-      color: #fff;
-      text-align: right;
+  .sub-title {
+    color: #fff;
+    text-align: right;
   }
 }
+// 顶部标题区域结束
+
+// 展示区开始
+.content {
+  position: relative;
+  width: 100%;
+  .content-head {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .star {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .content-body {
+  }
+  .content-foot {
+  }
+}
+// 展示区结束
