@@ -1,10 +1,42 @@
 // 第一页样式设置
 
+// 边角音乐播放开关开始
+.music {
+  position: absolute;
+  z-index: 999;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../images/yf.svg");
+  background-size: 100%;
+}
+
+// 音乐播放动画
+.music-off {
+  animation-name: music-off;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+// 定义音乐播放时的动画效果
+@keyframes music-off {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+// 边角音乐播放开关结束
+
 // 顶部标题区域开始
 .title {
-  margin-top: 3.23rem;
-  margin-left: 2.3rem;
-  margin-right: 2.3rem;
+  margin-top: 3rem;
+  margin-left: 2.22rem;
+  margin-right: 2.22rem;
 
   img {
     width: 100%;
@@ -14,6 +46,7 @@
   .sub-title {
     color: #fff;
     text-align: right;
+    font-size: 1.4rem;
   }
 }
 // 顶部标题区域结束
@@ -27,11 +60,17 @@
     width: 100%;
     top: 0;
     left: 0;
-    .star {
-      img {
-        width: 100%;
-        height: auto;
-      }
+
+    // 头部区域图片
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+    }
+
+    .bat {
+      opacity: 0;
+      animation: fadeIn 2s infinite 2s, pulse 800ms infinite 2s;
     }
   }
   .content-body {

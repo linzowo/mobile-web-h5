@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>移动端万圣节h5</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- 顶部标题区开始 -->
-        <div class="title animated fadeInDown delay-1s">
-            <img src="./images/title.png" alt="">
-            <div class="sub-title">
-                Horror Night
-            </div>
+      <!-- 边角音乐播放开关 -->
+      <div class="music music-off">
+        <div class="music-control">
+          <audio autoplay loop preload>
+            <source
+              src="http://music.163.com/song/media/outer/url?id=65528.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
         </div>
-        <!-- 顶部标题区结束 -->
-
-        <!-- 展示区开始 -->
-        <div class="content">
-            <div class="content-head">
-                <div class="star animated infinite fadeIn fast">
-                    <img src="./images/star.png" alt="">
-                </div>
-                <div class="bat"></div>
-            </div>
-            <div class="content-body"></div>
-            <div class="content-foot"></div>
+      </div>
+      <!-- 边角音乐播放开关 -->
+      <!-- 顶部标题区开始 -->
+      <div class="title animated fadeInDown">
+        <img src="./images/title.png" alt="" />
+        <div class="sub-title">
+          Horror Night
         </div>
-        <!-- 展示区结束 -->
+      </div>
+      <!-- 顶部标题区结束 -->
 
+      <!-- 展示区开始 -->
+      <div class="content">
+        <div class="content-head">
+          <div class="star animated infinite fadeIn slow delay-1s">
+            <img src="./images/star.png" alt="" />
+          </div>
+          <div class="bat animated">
+            <img src="./images/bat.png" alt="" />
+          </div>
+        </div>
+        <div class="content-body"></div>
+        <div class="content-foot"></div>
+      </div>
+      <!-- 展示区结束 -->
     </div>
-</body>
+  </body>
 </html>
