@@ -34,6 +34,7 @@
 
 // 顶部标题区域开始
 .title {
+  position: relative;
   margin-top: 3rem;
   margin-left: 2.22rem;
   margin-right: 2.22rem;
@@ -53,10 +54,12 @@
 
 // 展示区开始
 .content {
-  position: relative;
+  position: absolute;
   width: 100%;
+  bottom: 0;
+  left: 0;
   .content-head {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
@@ -74,8 +77,54 @@
     }
   }
   .content-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    div {
+      position: absolute;
+      width: 100%;
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+      }
+    }
+    .house {
+      z-index: 9;
+      bottom: 16rem;
+    }
+    .sward {
+      z-index: 0;
+      bottom: 0;
+    }
+    .pumpkin {
+      z-index: 99;
+      bottom: 8rem;
+    }
   }
   .content-foot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .arrow{
+      position: absolute;
+      bottom: 4rem;
+      left: 50%;
+      margin-left: -1rem;
+      img{
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    p{
+      color: #fff;
+      font-size: 1.8rem;
+      letter-spacing:.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
   }
 }
 // 展示区结束

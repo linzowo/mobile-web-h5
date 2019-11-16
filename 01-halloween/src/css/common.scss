@@ -28,12 +28,19 @@
   }
 }
 
-//   容器设置
+// 背景设置
+html{
+  background-color: #292c3d;
+}
+body{
+  height: 100%;
+}
 
+//   容器设置
 .container {
   background-color: #292c3d;
-  height: 800px;
   margin: 0 auto;
   border-top: 1px solid #ccc;
   position: relative;
+  height: 100%;
 }
