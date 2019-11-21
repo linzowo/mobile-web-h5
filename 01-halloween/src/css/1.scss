@@ -2,10 +2,10 @@
 
 // 边角音乐播放开关开始
 .music {
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  top: 1rem;
-  right: 1rem;
+  right: 3.333%;
+  top: 1.875%;
   width: 3rem;
   height: 3rem;
   background-image: url("../images/yf.svg");
@@ -18,6 +18,7 @@
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-play-state: paused;
 }
 
 // 定义音乐播放时的动画效果
@@ -35,9 +36,9 @@
 // 顶部标题区域开始
 .title {
   position: relative;
-  margin-top: 3rem;
-  margin-left: 2.22rem;
-  margin-right: 2.22rem;
+  margin-top: 9.8%;
+  margin-left: 7.2%;
+  margin-right: 7.2%;
 
   img {
     width: 100%;
@@ -92,8 +93,13 @@
       }
     }
     .house {
-      z-index: 9;
+      z-index: 0;
       bottom: 16rem;
+    }
+    @media (max-width: 320px) {
+      .house {
+        bottom: 15rem;
+      }
     }
     .sward {
       z-index: 0;
@@ -102,6 +108,9 @@
     .pumpkin {
       z-index: 99;
       bottom: 8rem;
+      img{
+        animation: bounceIn 2s, jello 800ms infinite 2s;
+      }
     }
   }
   .content-foot {

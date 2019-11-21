@@ -11,21 +11,24 @@ import "../css/1.scss";
 // 引入动画样式库
 import "../css/animate.css";
 
-// 解决移动端样式尺寸适配问题。动态计算rem的基准值
-let htmlObj = document.documentElement,
-  htmlWidth = htmlObj.clientWidth >= 768 ? 720 : htmlObj.clientWidth;
-htmlObj.style.fontSize = htmlWidth / 30 + "px";
 
-// 根据设备高度动态设置页面内容高度
-htmlObj.style.height = htmlObj.clientHeight + "px";
+// 根据设备高度动态设置容器高度
+let htmlObj = document.documentElement,
+containerObj = document.querySelector('.container');
+
+htmlObj.style.fontSize = containerObj.clientWidth / 30 + "px";
+containerObj.style.height = (containerObj.offsetWidth * (1920/1080)) + "px";
+
+
 
 // 动态计算content区域的高度，保证其填满标题下方到页面底部的距离
 let titleObj = htmlObj.querySelector(".title");
 let titleHeight = titleObj.offsetHeight + titleObj.offsetTop;
-htmlObj.querySelector(".content").style.height = (htmlObj.clientHeight - titleHeight) + "px";
+htmlObj.querySelector(".content").style.height = (containerObj.clientHeight - titleHeight) + "px";
 
-// 为音乐播放元素添加事件
-musicControlModel(document.querySelector(".music"));
+// 为音乐播放元素添加事件，同时解决浏览器禁用自动播放功能
+let musicObj = document.querySelector(".music");
+musicControlModel(musicObj);
 
 // 热模块更新处理区域
 if (module.hot) {

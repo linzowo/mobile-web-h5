@@ -15,25 +15,9 @@
   box-sizing: border-box;
 }
 
-// 通过媒体查询控制容器大小，超过768后全部为720
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
 // 背景设置
 html{
-  background-color: #292c3d;
-}
-body{
-  height: 100%;
+  background-color: #e3653c;
 }
 
 //   容器设置
@@ -42,5 +26,5 @@ body{
   margin: 0 auto;
   border-top: 1px solid #ccc;
   position: relative;
-  height: 100%;
+  overflow: hidden;
 }
