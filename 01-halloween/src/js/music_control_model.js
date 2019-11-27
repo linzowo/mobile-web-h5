@@ -1,8 +1,8 @@
 // 关于音乐控制的控件
 
 export default function musicControlModel(dom) {
-  let domNode = dom,
-    musicPlayer = domNode.querySelector(".music-control audio");
+  let domNode = dom;
+  let musicPlayer = domNode.querySelector(".music-control audio");
   domNode.addEventListener("click", function() {
     // 检测当前音乐播放器状态，根据状态变换为另一状态
     if (musicPlayer.paused) {
@@ -14,7 +14,7 @@ export default function musicControlModel(dom) {
     }
   });
 
-//   以下内容为处理部分浏览器不能自动播放问题的处理措施
+  //   以下内容为处理部分浏览器不能自动播放问题的处理措施
   // touchstart处理函数
   function touchstartHandle() {
     setTimeout(function() {

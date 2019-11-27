@@ -1,139 +1,95 @@
 // 第一页样式设置
 
-// 边角音乐播放开关开始
-.music {
-  position: fixed;
-  z-index: 999;
-  right: 3.333%;
-  top: 1.875%;
-  width: 3rem;
-  height: 3rem;
-  background-image: url("../images/yf.svg");
-  background-size: 100%;
-}
+// 引入公共样式 主要是为了引入mixin
+@import "./common.scss";
 
-// 音乐播放动画
-.music-off {
-  animation-name: music-off;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
-}
-
-// 定义音乐播放时的动画效果
-@keyframes music-off {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-// 边角音乐播放开关结束
-
-// 顶部标题区域开始
-.title {
-  position: relative;
-  margin-top: 9.8%;
-  margin-left: 7.2%;
-  margin-right: 7.2%;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .sub-title {
-    color: #fff;
-    text-align: right;
-    font-size: 1.4rem;
-  }
-}
-// 顶部标题区域结束
-
-// 展示区开始
-.content {
-  position: absolute;
+ul {
   width: 100%;
-  bottom: 0;
-  left: 0;
-  .content-head {
-    position: relative;
-    width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #292c3d;
+  li {
+    display: block;
+    visibility: hidden;
+    position: absolute;
     top: 0;
     left: 0;
-
-    // 头部区域图片
-    img {
-      position: absolute;
-      width: 100%;
-      height: auto;
-    }
-
-    .bat {
-      opacity: 0;
-      animation: fadeIn 2s infinite 2s, pulse 800ms infinite 2s;
-    }
-  }
-  .content-body {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    div {
-      position: absolute;
-      width: 100%;
-      img {
+    height: 100%;
+    overflow: hidden;
+    &:nth-child(1) {
+      visibility: visible;
+      // 顶部标题区域开始
+      .title {
+        position: relative;
+        // @include px2rem(margin-top, 100);
+        margin-top: 9.25%;
+        text-align: center;
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .sub-title {
+          color: #fff;
+          text-align: right;
+          @include px2rem(font-size, 51);
+          @include px2rem(margin-top, -30);
+          @include px2rem(padding-right, 80);
+        }
+      }
+      // 顶部标题区域结束
+
+      // 展示区开始
+
+      // 头部区域图片
+      .star{
         position: absolute;
+        background-image: url("../images/star.png");
+        background-size: cover;
         width: 100%;
-        height: auto;
-        bottom: 0;
+        height: 11%;
       }
-    }
-    .house {
-      z-index: 0;
-      bottom: 16rem;
-    }
-    @media (max-width: 320px) {
+      .bat {
+        position: absolute;
+        animation: fadeIn 8s, pulse 800ms infinite 2s;
+        background-image: url("../images/bat.png");
+        background-size: cover;
+        width: 100%;
+        height: 17%;
+      }
       .house {
-        bottom: 15rem;
+        width: 100%;
+        height: 33%;
+        position: absolute;
+        z-index: 0;
+        bottom: 31%;
+        background-image: url("../images/1_house.png");
+        background-size: cover;
       }
-    }
-    .sward {
-      z-index: 0;
-      bottom: 0;
-    }
-    .pumpkin {
-      z-index: 99;
-      bottom: 8rem;
-      img{
-        animation: bounceIn 2s, jello 800ms infinite 2s;
+      .sward {
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        background-image: url("../images/1-caoping.png");
+        background-size: cover;
+        width: 100%;
+        height: 35%;
       }
-    }
-  }
-  .content-foot {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    .arrow{
-      position: absolute;
-      bottom: 4rem;
-      left: 50%;
-      margin-left: -1rem;
-      img{
-        width: 2rem;
-        height: 2rem;
+      .pumpkin {
+        width: 100%;
+        height: 16%;
+        position: absolute;
+        z-index: 99;
+        bottom: 14%;
+        // @include px2rem(bottom, 270);
+        background-image: url("../images/1_nangua.png");
+        background-size: cover;
+        animation: fadeIn 8s, pulse 800ms infinite 2s;
       }
-    }
-    p{
-      color: #fff;
-      font-size: 1.8rem;
-      letter-spacing:.2rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
     }
   }
 }
+
 // 展示区结束
