@@ -71,23 +71,6 @@ body {
   }
 }
 
-.container.phone-box {
-  width: 360px;
-  height: 640px;
-  background-image: url("../images/phone-box.svg");
-  background-size: 100% 100%;
-  margin-top: 100px;
-  border-radius: 30px;
-}
-.main.phone-box {
-  width: 95%;
-  height: 81%;
-  margin: 0 auto;
-  margin-top: 24%;
-  position: relative;
-  background-color: #292c3d;
-}
-
 // 边角音乐播放开关开始
 .music {
   position: fixed;
@@ -109,13 +92,6 @@ body {
   animation-play-state: paused;
 }
 
-.music.phone-box {
-  position: absolute;
-  top: 16%;
-  right: 6%;
-  width: 11%;
-  height: 6%;
-}
 
 // 定义音乐播放时的动画效果
 @keyframes music-off {
@@ -158,22 +134,5 @@ body {
     text-align: center;
   }
 
-  &.phone-box {
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    .arrow{
-      position: absolute;
-      width: 6%;
-      height: 33%;
-      margin-left: -3%;
-      bottom: 130%;
-      left: 50%;
-
-    }
-    p{
-    font-size: 15%;
-    bottom: 80%;
-    }
-  }
+  
 }

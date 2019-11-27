@@ -17,39 +17,14 @@ import "../css/animate.css";
 // 为音乐播放元素添加事件，同时解决浏览器禁用自动播放功能
 musicControlModel(document.querySelector(".music"));
 
-// 保证内容一屏显示
-// 判断用户使用的是什么设备
-let docEl = document.documentElement;
-var elObj = {};
-elObj["mainEl"] = document.querySelector(".main");
-elObj["container"] = document.querySelector(".container");
-elObj["swipeEl"] = document.querySelector(".swipe-up");
-elObj["musicEl"] = document.querySelector(".music");
+// 动态设置main区域的margin,保证内容在垂直方向是居中显示的
+(function() {
+  let docEl = document.documentElement;
+  let mainEl = document.querySelector(".main");
 
-// if (navigator.userAgent.match(/(iPhone|iPod|ipad|Android|ios|SymbianOS)/i)) {
-//   // 用户采用手机访问
-
-//   // 去除电脑端浏览相关样式设置
-//   for(let ele in elObj){
-//     elObj[ele].setAttribute("class",elObj[ele].className.replace("phone-box",""));
-//   } //===> container.setAttribute("class","container");
-
-//   // 动态设置main区域的margin
-//   elObj["mainEl"].style.marginTop = (docEl.clientHeight - elObj["mainEl"].clientHeight) / 2 + "px";
-// } else {
-//   // 用户采用电脑访问
-
-//   // 添加电脑端相关设置样式
-//   for(let ele in elObj){
-//     elObj[ele].setAttribute("class",elObj[ele].className + " phone-box");
-//   } //===> container.setAttribute("class","container phone-box");
-
-//   // 将音乐和滑动组件的参照点改为盒子容器而不是整个屏幕
-
-// }
-// 动态设置main区域的margin
-elObj["mainEl"].style.marginTop =
-  (docEl.clientHeight - elObj["mainEl"].clientHeight) / 2 + "px";
+  mainEl.style.marginTop =
+    (docEl.clientHeight - mainEl.clientHeight) / 2 + "px";
+})();
 
 // 热模块更新处理区域
 if (module.hot) {
