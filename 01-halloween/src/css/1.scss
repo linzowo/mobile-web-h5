@@ -18,8 +18,8 @@ ul {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    &:nth-child(1) {
-      visibility: visible;
+    &:first-child {
+      // visibility: visible;
       // 顶部标题区域开始
       .title {
         position: relative;
@@ -87,6 +87,54 @@ ul {
         background-image: url("../images/1_nangua.png");
         background-size: cover;
         animation: fadeIn 8s, pulse 800ms infinite 2s;
+      }
+    }
+    &:nth-child(2){
+      visibility: visible;
+      &>div{
+        position: absolute;
+        width: 100%;
+      }
+      .title,.star{
+        @include px2rem(height,435);
+        background-image: url("../images/2-title.png");
+        background-size: 100% 100%;
+        @include px2rem(top,130);
+      }
+      .star{
+        background-image: url("../images/2-star.png");
+      }
+      .flag{
+        @include px2rem(height,348);
+        background-image: url("../images/2-flag.png");
+        background-size: cover;
+        @include px2rem(top,620);
+      }
+      .sward{
+        @include px2rem(height,529);
+        background-image: url("../images/2-sward.png");
+        background-size: contain;
+        bottom: 0;
+        color: #fff;
+        text-align: left;
+        padding: 200px 300px 165px 130px;
+        h2{
+          @include px2rem(font-size,50)
+        }
+        p{
+          @include px2rem(font-size,26)
+        }
+      }
+      .cat{
+        @include px2rem(height,330);
+        background-image: url("../images/2-cat.png");
+        @include px2rem(bottom,468);
+        z-index: 1;
+      }
+      .tombstone{
+        @include px2rem(height,590);
+        background-image: url("../images/2-tombstone.png");
+        @include px2rem(bottom,310);
       }
     }
   }
