@@ -8,18 +8,17 @@ ul.main {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  background-color: #292c3d;
   & > li {
+    background-color: #292c3d;
     display: block;
     visibility: hidden;
     position: absolute;
-    top: 0;
+    // top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
     &:first-child {
-      // visibility: visible;
       // 顶部标题区域开始
       .title {
         position: relative;
@@ -53,7 +52,6 @@ ul.main {
       }
       .bat {
         position: absolute;
-        animation: fadeIn 8s, pulse 800ms infinite 2s;
         background-image: url("../images/bat.png");
         background-size: cover;
         width: 100%;
@@ -86,11 +84,34 @@ ul.main {
         // @include px2rem(bottom, 270);
         background-image: url("../images/1_nangua.png");
         background-size: cover;
-        animation: fadeIn 8s, pulse 800ms infinite 2s;
+      }
+
+      // 动画设置区
+      &.animated {
+        .title {
+          animation-name: fadeInDown;
+          animation-duration: 1s;
+        }
+        .star {
+          animation-name: fadeIn;
+          animation-delay: 1s;
+          animation-iteration-count: infinite;
+          animation-duration: 2s;
+        }
+        .bat {
+          animation: fadeIn 8s, pulse 800ms infinite 2s;
+        }
+        .house {
+          animation-name: slideInUp;
+          animation-delay: 1s;
+          animation-duration: 1s;
+        }
+        .pumpkin {
+          animation: fadeIn 8s, pulse 800ms infinite 2s;
+        }
       }
     }
     &:nth-child(2) {
-      // visibility: visible;
       & > div {
         position: absolute;
         width: 100%;
@@ -139,7 +160,6 @@ ul.main {
       }
     }
     &:last-child {
-      visibility: visible;
       & > div {
         position: absolute;
         width: 100%;

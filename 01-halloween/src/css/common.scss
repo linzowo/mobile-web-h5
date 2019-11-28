@@ -132,6 +132,26 @@ body {
   
 }
 
+// 与页面滑动切换相关的样式设置---开始
+.current{
+  visibility: visible!important;
+  z-index: 0;
+}
+
+.next {
+  visibility: visible!important;
+  z-index: 1;
+  top: 100%;
+}
+
+.pre{
+  visibility: visible!important;
+  z-index: 1;
+  top: -100%;
+}
+// 与页面滑动切换相关的样式设置---结束
+
+
 // 针对ipad等宽屏设备的兼容设置
 @media screen and (min-device-width: 768px) {
   html{

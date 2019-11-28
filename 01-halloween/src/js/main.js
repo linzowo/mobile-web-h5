@@ -2,6 +2,7 @@
 
 // 引入js文件
 import "./dpr_rem_scale.config.js";
+import "./swipe.js";
 
 // 引入其他模块
 import show from "./index.js"; // 测试导入模块是否成功的测试模块
