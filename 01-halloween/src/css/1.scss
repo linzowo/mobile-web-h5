@@ -3,13 +3,13 @@
 // 引入公共样式 主要是为了引入mixin
 @import "./common.scss";
 
-ul {
+ul.main {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   position: relative;
   background-color: #292c3d;
-  li {
+  &>li {
     display: block;
     visibility: hidden;
     position: absolute;
@@ -90,7 +90,7 @@ ul {
       }
     }
     &:nth-child(2){
-      visibility: visible;
+      // visibility: visible;
       &>div{
         position: absolute;
         width: 100%;
@@ -136,6 +136,89 @@ ul {
         background-image: url("../images/2-tombstone.png");
         @include px2rem(bottom,310);
       }
+    }
+    &:last-child{
+      visibility: visible;
+      &>div{
+        position: absolute;
+        width: 100%;
+      }
+      .title{
+        @include px2rem(height,531);
+        @include px2rem(top,105);
+        background-image: url("../images/e-title.png");
+        background-size: contain;
+      }
+      .spider{
+        @include px2rem(height,639);
+        @include px2rem(top,636);
+        background-image: url("../images/e-spider.png");
+        background-size: contain;
+      }
+      .content{
+        @include px2rem(height,250);
+        @include px2rem(bottom,350);
+        text-align: center;
+        h2{
+          position: relative;
+          color: #94be5c;
+          @include px2rem(font-size,84);
+        }
+        p{
+          position: relative;
+        }
+        p:nth-child(2){
+          top: 25px;
+          @include px2rem(font-size,48);
+          color: #e3653c;
+        }
+        p:nth-child(3){
+          top: 50px;
+          @include px2rem(font-size,48);
+          color: #fff;
+        }
+      }
+      .foot{
+        @include px2rem(height,238);
+        bottom: 0;
+        background-image: url("../images/e-hand.png");
+        background-size: contain;
+        color: #fff;
+        text-align: center;
+        ul.icon{
+          width: 100%;
+          @include px2rem(height,80);
+          @include px2rem(bottom,160);
+          position: absolute;
+          // padding: 0 125px;
+          @include px2rem(padding-left,243);
+          li{
+            float: left;
+            @include px2rem(width,80);
+            height: 100%;
+            margin-left: 60px;
+            &:nth-child(1){
+              background-image: url("../images/e-icon-f.png");
+            }
+            &:nth-child(2){
+              background-image: url("../images/e-icon-c.png");
+            }
+            &:nth-child(3){
+              background-image: url("../images/e-icon-t.png");
+            }
+            &:nth-child(4){
+              background-image: url("../images/e-icon-y.png");
+            }
+          }
+        }
+        p{
+          position: absolute;
+          width: 100%;
+          @include px2rem(font-size,42);
+          @include px2rem(bottom,100);
+        }
+      }
+
     }
   }
 }
