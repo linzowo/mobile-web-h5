@@ -9,7 +9,7 @@ ul.main {
   margin: 0 auto;
   position: relative;
   background-color: #292c3d;
-  &>li {
+  & > li {
     display: block;
     visibility: hidden;
     position: absolute;
@@ -44,7 +44,7 @@ ul.main {
       // 展示区开始
 
       // 头部区域图片
-      .star{
+      .star {
         position: absolute;
         background-image: url("../images/star.png");
         background-size: cover;
@@ -89,136 +89,136 @@ ul.main {
         animation: fadeIn 8s, pulse 800ms infinite 2s;
       }
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       // visibility: visible;
-      &>div{
+      & > div {
         position: absolute;
         width: 100%;
       }
-      .title,.star{
-        @include px2rem(height,435);
+      .title,
+      .star {
+        @include px2rem(height, 435);
         background-image: url("../images/2-title.png");
         background-size: 100% 100%;
-        @include px2rem(top,130);
+        @include px2rem(top, 130);
       }
-      .star{
+      .star {
         background-image: url("../images/2-star.png");
       }
-      .flag{
-        @include px2rem(height,348);
+      .flag {
+        @include px2rem(height, 348);
         background-image: url("../images/2-flag.png");
         background-size: cover;
-        @include px2rem(top,620);
+        @include px2rem(top, 620);
       }
-      .sward{
-        @include px2rem(height,529);
+      .sward {
+        @include px2rem(height, 529);
         background-image: url("../images/2-sward.png");
-        background-size: contain;
+        background-size: 100% 100%;
         bottom: 0;
         color: #fff;
         text-align: left;
         padding: 200px 300px 165px 130px;
-        h2{
-          @include px2rem(font-size,50)
+        h2 {
+          @include px2rem(font-size, 50);
         }
-        p{
-          @include px2rem(font-size,26)
+        p {
+          @include px2rem(font-size, 26);
         }
       }
-      .cat{
-        @include px2rem(height,330);
+      .cat {
+        @include px2rem(height, 330);
         background-image: url("../images/2-cat.png");
-        @include px2rem(bottom,468);
+        @include px2rem(bottom, 468);
         z-index: 1;
       }
-      .tombstone{
-        @include px2rem(height,590);
+      .tombstone {
+        @include px2rem(height, 590);
         background-image: url("../images/2-tombstone.png");
-        @include px2rem(bottom,310);
+        @include px2rem(bottom, 310);
       }
     }
-    &:last-child{
+    &:last-child {
       visibility: visible;
-      &>div{
+      & > div {
         position: absolute;
         width: 100%;
       }
-      .title{
-        @include px2rem(height,531);
-        @include px2rem(top,105);
+      .title {
+        @include px2rem(height, 531);
+        @include px2rem(top, 105);
         background-image: url("../images/e-title.png");
-        background-size: contain;
+        background-size: 100% 100%;
       }
-      .spider{
-        @include px2rem(height,639);
-        @include px2rem(top,636);
+      .spider {
+        @include px2rem(height, 639);
+        @include px2rem(top, 636);
         background-image: url("../images/e-spider.png");
-        background-size: contain;
+        background-size: 100% 100%;
       }
-      .content{
-        @include px2rem(height,250);
-        @include px2rem(bottom,350);
+      .content {
+        @include px2rem(height, 250);
+        @include px2rem(bottom, 350);
         text-align: center;
-        h2{
+        h2 {
           position: relative;
           color: #94be5c;
-          @include px2rem(font-size,84);
+          @include px2rem(font-size, 84);
         }
-        p{
+        p {
           position: relative;
         }
-        p:nth-child(2){
+        p:nth-child(2) {
           top: 25px;
-          @include px2rem(font-size,48);
+          @include px2rem(font-size, 48);
           color: #e3653c;
         }
-        p:nth-child(3){
+        p:nth-child(3) {
           top: 50px;
-          @include px2rem(font-size,48);
+          @include px2rem(font-size, 48);
           color: #fff;
         }
       }
-      .foot{
-        @include px2rem(height,238);
+      .foot {
+        @include px2rem(height, 238);
         bottom: 0;
         background-image: url("../images/e-hand.png");
-        background-size: contain;
+        background-size: 100% 100%;
         color: #fff;
         text-align: center;
-        ul.icon{
+        ul.icon {
           width: 100%;
-          @include px2rem(height,80);
-          @include px2rem(bottom,160);
+          @include px2rem(height, 80);
+          @include px2rem(bottom, 160);
           position: absolute;
-          // padding: 0 125px;
-          @include px2rem(padding-left,243);
-          li{
+          @include px2rem(padding-left, 243);
+          li {
             float: left;
-            @include px2rem(width,80);
+            @include px2rem(width, 80);
             height: 100%;
-            margin-left: 60px;
-            &:nth-child(1){
+            @include px2rem(margin-left, 60);
+            background-size: cover;
+            &:nth-child(1) {
               background-image: url("../images/e-icon-f.png");
             }
-            &:nth-child(2){
+            &:nth-child(2) {
               background-image: url("../images/e-icon-c.png");
             }
-            &:nth-child(3){
+            &:nth-child(3) {
               background-image: url("../images/e-icon-t.png");
             }
-            &:nth-child(4){
+            &:nth-child(4) {
               background-image: url("../images/e-icon-y.png");
             }
           }
         }
-        p{
+        p {
           position: absolute;
           width: 100%;
-          @include px2rem(font-size,42);
-          @include px2rem(bottom,100);
+          @include px2rem(font-size, 42);
+          @include px2rem(bottom, 100);
         }
       }
-
     }
   }
 }

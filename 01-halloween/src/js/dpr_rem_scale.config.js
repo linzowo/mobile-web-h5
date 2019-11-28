@@ -5,11 +5,18 @@ let dpr, rem, scale;
 let docEl = document.documentElement;
 let fontSizeEl = document.createElement("style");
 let metaEl = document.querySelector('meta[name="viewport"]');
+let viewportWidth = 0;
 
 // 初步计算相关数据
 dpr = window.devicePixelRatio || 1;
 scale = 1 / dpr;
 rem = (docEl.clientWidth * dpr) / 10;
+
+// if(docEl.clientWidth>=768){
+//     rem = (docEl.clientWidth * 0.8 * dpr) / 10;
+// }else{
+//     rem = (docEl.clientWidth * dpr) / 10;
+// }
 
 // 设置viewport，进行缩放，达到高清效果
 metaEl.setAttribute(
