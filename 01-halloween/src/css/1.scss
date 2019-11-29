@@ -160,7 +160,24 @@ ul.main {
       }
       // 动画设置
       &.animated{
-        
+        .title,.flag {
+          animation-name: fadeInDown;
+          animation-duration: 1s;
+        }
+        .star {
+          animation-name: fadeIn;
+          animation-delay: 1s;
+          animation-iteration-count: infinite;
+          animation-duration: 2s;
+        }
+        .tombstone{
+          animation-name: slideInUp;
+          animation-delay: 1s;
+          animation-duration: 1s;
+        }
+        .cat{
+          animation: fadeIn 8s, pulse 800ms infinite 2s;
+        }
       }
     }
     &:last-child {
@@ -241,6 +258,20 @@ ul.main {
           width: 100%;
           @include px2rem(font-size, 42);
           @include px2rem(bottom, 100);
+        }
+      }
+
+      &.animated {
+        .title{
+          animation-name: fadeInDown;
+          animation-duration: 1s;
+        }
+        .spider{
+          animation: fadeIn 8s, pulse 800ms infinite 2s;
+        }
+        .foot{
+          animation-name: slideInUp;
+          animation-duration: 2s;
         }
       }
     }
