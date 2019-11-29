@@ -158,6 +158,10 @@ ul.main {
         background-image: url("../images/2-tombstone.png");
         @include px2rem(bottom, 310);
       }
+      // 动画设置
+      &.animated{
+        
+      }
     }
     &:last-child {
       & > div {

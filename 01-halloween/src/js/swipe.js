@@ -25,7 +25,13 @@ export default function swipe(container, allPageList) {
   document.documentElement.firstChild.appendChild(styleEl);
   styleEl.innerHTML =
     ".current{visibility: visible!important;z-index: 0;}.next {visibility: visible!important;z-index: 1;top: 100%;}.pre{visibility: visible!important;z-index: 1;top: -100%;}";
-  pageList[0].classList.add("current");
+  pageList[0].classList.add("current","animated");
+
+//   禁用body的touchmove事件===>阻止手机浏览器自带的下拉刷新事件
+document.body.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+}, { passive: false });
+
 
   //   为每个页面li添加唯一数据id，方便后面操作
   pageList.forEach((ele, key) => {

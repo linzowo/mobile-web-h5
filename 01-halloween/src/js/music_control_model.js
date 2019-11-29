@@ -33,5 +33,5 @@ export default function musicControlModel(dom) {
     } else {
       domNode.style = "animation-play-state: running;"; // 继续运行播放动画
     }
-  }, 100);
+  }, 1000);
 }
