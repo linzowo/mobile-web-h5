@@ -2,11 +2,12 @@
 
 // 引入js文件
 import "./dpr_rem_scale.config.js";
-import "./swipe.js";
+// import "./swipe.js";
 
 // 引入其他模块
 import show from "./index.js"; // 测试导入模块是否成功的测试模块
 import musicControlModel from "./music_control_model.js"; // 控制音乐播放与暂停的模块
+import swipe from "./swipe.js";
 
 // 引入样式文件
 // import "../css/common.scss";
@@ -26,6 +27,9 @@ musicControlModel(document.querySelector(".music"));
   mainEl.style.marginTop =
     (docEl.clientHeight - mainEl.clientHeight) / 2 + "px";
 })();
+
+// 为页面添加滑动功能
+swipe(document.querySelector(".main"),document.querySelectorAll(".main>li"));
 
 // 热模块更新处理区域
 if (module.hot) {
