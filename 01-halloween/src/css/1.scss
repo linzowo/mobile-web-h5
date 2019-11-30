@@ -18,6 +18,12 @@ ul.main {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    & > div {
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+    }
+
     &:first-child {
       // 顶部标题区域开始
       .title {
@@ -46,76 +52,40 @@ ul.main {
       .star {
         position: absolute;
         background-image: url("../images/star.png");
-        background-size: cover;
-        width: 100%;
+
         height: 11%;
       }
       .bat {
         position: absolute;
         background-image: url("../images/bat.png");
-        background-size: cover;
-        width: 100%;
+
         height: 17%;
       }
       .house {
-        width: 100%;
         height: 33%;
         position: absolute;
         z-index: 0;
         bottom: 31%;
         background-image: url("../images/1_house.png");
-        background-size: cover;
       }
       .sward {
         position: absolute;
         z-index: 0;
         bottom: 0;
         background-image: url("../images/1-caoping.png");
-        background-size: cover;
-        width: 100%;
+
         height: 35%;
       }
       .pumpkin {
-        width: 100%;
         height: 16%;
         position: absolute;
         z-index: 99;
         bottom: 14%;
         // @include px2rem(bottom, 270);
         background-image: url("../images/1_nangua.png");
-        background-size: cover;
-      }
-
-      // 动画设置区
-      &.animated {
-        .title {
-          animation-name: fadeInDown;
-          animation-duration: 1s;
-        }
-        .star {
-          animation-name: fadeIn;
-          animation-delay: 1s;
-          animation-iteration-count: infinite;
-          animation-duration: 2s;
-        }
-        .bat {
-          animation: fadeIn 8s, pulse 800ms infinite 2s;
-        }
-        .house {
-          animation-name: slideInUp;
-          animation-delay: 1s;
-          animation-duration: 1s;
-        }
-        .pumpkin {
-          animation: fadeIn 8s, pulse 800ms infinite 2s;
-        }
       }
     }
     &:nth-child(2) {
-      & > div {
-        position: absolute;
-        width: 100%;
-      }
       .title,
       .star {
         @include px2rem(height, 435);
@@ -129,7 +99,7 @@ ul.main {
       .flag {
         @include px2rem(height, 348);
         background-image: url("../images/2-flag.png");
-        background-size: cover;
+
         @include px2rem(top, 620);
       }
       .sward {
@@ -158,28 +128,321 @@ ul.main {
         background-image: url("../images/2-tombstone.png");
         @include px2rem(bottom, 310);
       }
-      // 动画设置
-      &.animated{
-        .title,.flag {
-          animation-name: fadeInDown;
-          animation-duration: 1s;
+    }
+    &:nth-child(3) {
+      .title {
+        @include px2rem(height, 227);
+        background-image: url("../images/3-title.png");
+
+        @include px2rem(top, 110);
+      }
+      .star {
+        @include px2rem(height, 397);
+        background-image: url("../images/3-star.png");
+
+        @include px2rem(top, 300);
+      }
+      .house {
+        @include px2rem(height, 915);
+        background-image: url("../images/3-house.png");
+
+        @include px2rem(top, 485);
+      }
+      .pumpkin {
+        @include px2rem(height, 339);
+        background-image: url("../images/3-nangua.png");
+
+        @include px2rem(bottom, 300);
+        z-index: 1;
+      }
+      .sward {
+        @include px2rem(height, 647);
+        background-image: url("../images/3-sward.png");
+
+        bottom: 0;
+      }
+      .foot {
+        overflow: hidden;
+        bottom: 0;
+        @include px2rem(height, 170);
+        @include px2rem(width, 1000);
+        @include px2rem(bottom, 100);
+        left: 50%;
+        @include px2rem(margin-left, -500);
+        p {
+          color: #fff;
+          @include px2rem(width, 170);
+          @include px2rem(height, 170);
+          @include px2rem(font-size, 76);
+          @include px2rem(line-height, 80);
+          // line-height: 20px;
         }
-        .star {
-          animation-name: fadeIn;
-          animation-delay: 1s;
-          animation-iteration-count: infinite;
-          animation-duration: 2s;
+        p.left {
+          float: left;
+          text-align: right;
+          @include px2rem(margin-right, 40);
         }
-        .tombstone{
-          animation-name: slideInUp;
-          animation-delay: 1s;
-          animation-duration: 1s;
+        p.right {
+          float: right;
+          text-align: left;
+          margin-left: 0;
         }
-        .cat{
-          animation: fadeIn 8s, pulse 800ms infinite 2s;
+        ul {
+          margin-right: 0;
+          float: left;
+          @include px2rem(width, 580);
+          @include px2rem(height, 150);
+          border-left: 10px solid #fff;
+          border-right: 10px solid #fff;
+          li {
+            float: left;
+            @include px2rem(height, 80);
+            @include px2rem(width, 80);
+            @include px2rem(margin-left, 30);
+            @include px2rem(margin-right, 30);
+            &:nth-child(1) {
+              background-image: url("../images/3-icon-f.png");
+            }
+            &:nth-child(2) {
+              background-image: url("../images/3-icon-i.png");
+            }
+            &:nth-child(3) {
+              background-image: url("../images/3-icon-t.png");
+            }
+            &:nth-child(4) {
+              background-image: url("../images/3-icon-y.png");
+            }
+          }
         }
       }
     }
+    &:nth-child(4) {
+      .title {
+        @include px2rem(height, 283);
+        background-image: url("../images/4-title.png");
+
+        @include px2rem(top, 85);
+      }
+      .star {
+        @include px2rem(height, 120);
+        background-image: url("../images/4-star.png");
+
+        @include px2rem(top, 325);
+      }
+      .hat {
+        @include px2rem(height, 369);
+        background-image: url("../images/4-hat.png");
+
+        @include px2rem(top, 430);
+      }
+      .content {
+        @include px2rem(height, 100);
+        @include px2rem(top, 820);
+        p {
+          margin: 0 auto;
+          display: block;
+          @include px2rem(width, 800);
+          height: 100%;
+          text-align: center;
+          color: #fff;
+          @include px2rem(font-size, 33);
+        }
+      }
+      .sward {
+        @include px2rem(height, 547);
+        background-image: url("../images/4-sward.png");
+
+        bottom: 0;
+      }
+      .bone {
+        @include px2rem(height, 547);
+        background-image: url("../images/4-bone.png");
+
+        bottom: 0;
+        z-index: 1;
+      }
+      .candle {
+        @include px2rem(height, 393);
+        background-image: url("../images/4-candle.png");
+
+        @include px2rem(bottom, 366);
+        z-index: 1;
+      }
+      .pot {
+        @include px2rem(height, 559);
+        background-image: url("../images/4-pot.png");
+
+        @include px2rem(bottom, 383);
+        z-index: 1;
+      }
+    }
+    &:nth-child(5) {
+      .title {
+        @include px2rem(height, 197);
+        background-image: url("../images/5-title.png");
+
+        @include px2rem(top, 100);
+      }
+      .star {
+        @include px2rem(height, 159);
+        background-image: url("../images/5-star.png");
+
+        @include px2rem(top, 230);
+      }
+      .content-5 {
+        @include px2rem(height, 800);
+        @include px2rem(top, 510);
+        & > div {
+          position: absolute;
+          width: 100%;
+        }
+        .flag {
+          @include px2rem(height, 198);
+          background-image: url("../images/5-content-1.png");
+
+          @include px2rem(top, 0);
+        }
+        .bone {
+          @include px2rem(height, 148);
+          background-image: url("../images/5-content-2.png");
+
+          @include px2rem(top, 350);
+        }
+        .content {
+          @include px2rem(height, 200);
+          @include px2rem(width, 550);
+          @include px2rem(top, 620);
+          @include px2rem(left, 120);
+          h2 {
+            color: #e3653c;
+            @include px2rem(font-size, 50);
+          }
+          p {
+            color: #fff;
+            @include px2rem(font-size, 26);
+            margin-top: 15px;
+          }
+        }
+      }
+      .sward {
+        @include px2rem(height, 567);
+        background-image: url("../images/5-sward.png");
+
+        bottom: 0;
+      }
+      .skull {
+        @include px2rem(height, 533);
+        background-image: url("../images/5-skull.png");
+
+        z-index: 1;
+        @include px2rem(bottom, 155);
+      }
+      .spider-5 {
+        @include px2rem(height, 800);
+        @include px2rem(top, 280);
+        & > div {
+          position: absolute;
+          width: 100%;
+        }
+        .cobweb {
+          @include px2rem(height, 244);
+          top: 0;
+          background-image: url("../images/5-cobweb.png");
+        }
+        .big-spider {
+          @include px2rem(height, 171);
+          bottom: 0;
+          background-image: url("../images/5-spider.png");
+        }
+        .line {
+          @include px2rem(height, 550);
+          @include px2rem(width, 5);
+          @include px2rem(top, 110);
+          @include px2rem(right, 230);
+          background-color: #fff;
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      .title {
+        @include px2rem(height, 350);
+        background-image: url("../images/6-title.png");
+
+        @include px2rem(top, 90);
+      }
+      .star {
+        @include px2rem(height, 535);
+        background-image: url("../images/6-star.png");
+
+        @include px2rem(top, 60);
+      }
+      .bat {
+        @include px2rem(height, 195);
+        background-image: url("../images/6-bat.png");
+
+        @include px2rem(top, 455);
+      }
+      .sward {
+        @include px2rem(height, 457);
+        background-image: url("../images/6-sward.png");
+
+        bottom: 0;
+      }
+      .moon {
+        @include px2rem(height, 874);
+        background-image: url("../images/6-moon.png");
+        @include px2rem(bottom, 260);
+      }
+      .tree {
+        @include px2rem(height, 830);
+        background-image: url("../images/6-tree.png");
+        @include px2rem(bottom, 410);
+        z-index: 1;
+      }
+      .foot {
+        @include px2rem(height, 457);
+        bottom: 0;
+        p {
+          color: #fff;
+          position: absolute;
+          @include px2rem(width, 800);
+          @include px2rem(font-size, 26);
+          @include px2rem(top, 100);
+          left: 50%;
+          @include px2rem(margin-left, -400);
+          text-align: center;
+        }
+        ul {
+          position: absolute;
+          @include px2rem(width, 580);
+          @include px2rem(height, 80);
+          left: 50%;
+          @include px2rem(margin-left, -290);
+          @include px2rem(bottom, 155);
+          li {
+            float: left;
+            @include px2rem(height, 80);
+            @include px2rem(width, 80);
+            @include px2rem(margin-left, 30);
+            @include px2rem(margin-right, 30);
+            &:nth-child(1) {
+              background-image: url("../images/3-icon-f.png");
+            }
+            &:nth-child(2) {
+              background-image: url("../images/3-icon-i.png");
+            }
+            &:nth-child(3) {
+              background-image: url("../images/3-icon-t.png");
+            }
+            &:nth-child(4) {
+              background-image: url("../images/3-icon-y.png");
+            }
+          }
+        }
+      }
+    }
+
     &:last-child {
       & > div {
         position: absolute;
@@ -238,7 +501,7 @@ ul.main {
             @include px2rem(width, 80);
             height: 100%;
             @include px2rem(margin-left, 60);
-            background-size: cover;
+
             &:nth-child(1) {
               background-image: url("../images/e-icon-f.png");
             }
@@ -260,22 +523,125 @@ ul.main {
           @include px2rem(bottom, 100);
         }
       }
-
-      &.animated {
-        .title{
-          animation-name: fadeInDown;
-          animation-duration: 1s;
-        }
-        .spider{
-          animation: fadeIn 8s, pulse 800ms infinite 2s;
-        }
-        .foot{
-          animation-name: slideInUp;
-          animation-duration: 2s;
-        }
-      }
     }
   }
 }
 
 // 展示区结束
+
+// 公共动画区---开始
+li.animated {
+  // 公共动画
+  .title,
+  .flag {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+  }
+  .star {
+    animation-name: fadeIn;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+  }
+  .house {
+    animation-name: slideInUp;
+    // animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  .pumpkin {
+    animation: fadeIn 8s, pulse 800ms infinite 2s;
+  }
+
+  // 第一页动画
+  .bat {
+    animation: fadeIn 8s, pulse 800ms infinite 2s;
+  }
+
+  // 第二页动画
+  .tombstone {
+    animation-name: slideInUp;
+    animation-delay: 1s;
+    animation-duration: 1s;
+  }
+  .cat {
+    animation: fadeIn 8s, pulse 800ms infinite 2s;
+  }
+
+  // 第三页 没有单独的动画
+
+  // 第四页动画
+  .hat {
+    animation-name: jackInTheBox;
+    animation-duration: 2s;
+  }
+  .content {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+  }
+  .pot {
+    animation: fadeIn 2s, pulse 800ms infinite 2s;
+  }
+  .candle {
+    animation: zoomInLeft 2s, shake 1000ms infinite 2s;
+  }
+
+  // 第五页动画
+  .content-5 {
+    .bone,
+    .content {
+      animation-name: slideInUp;
+      animation-duration: 2s;
+    }
+  }
+  .spider-5 {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    .big-spider {
+      animation-name: spider-flex;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .line {
+      animation-name: line-flex;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  @keyframes line-flex {
+    0% {
+      @include px2rem(height, 550);
+    }
+    50% {
+      @include px2rem(height, 50);
+    }
+    100% {
+      @include px2rem(height, 550);
+    }
+  }
+  @keyframes spider-flex {
+    0% {
+      @include px2rem(bottom, 0);
+    }
+    50% {
+      @include px2rem(bottom, 500);
+    }
+    100% {
+      @include px2rem(bottom, 0);
+    }
+  }
+
+  .skull {
+    animation: fadeIn 4s, tada 800ms infinite 2s;
+  }
+
+  // 最后一页动画
+  .spider {
+    animation: slideInUp 8s, flash 800ms infinite 2s;
+  }
+  .foot {
+    animation-name: slideInUp;
+    animation-duration: 2s;
+  }
+}
+// 公共动画区---结束
