@@ -635,6 +635,16 @@ li.animated {
     animation: fadeIn 4s, tada 800ms infinite 2s;
   }
 
+  // 第六页动画
+  .moon{
+    animation-name: slideInUp;
+    animation-duration: 1s;
+  }
+  .tree{
+    animation-name: slideInUp;
+    animation-duration: 2s;
+  }
+
   // 最后一页动画
   .spider {
     animation: slideInUp 8s, flash 800ms infinite 2s;
