@@ -443,6 +443,91 @@ ul.main {
       }
     }
 
+    &:nth-child(7) {
+      .title {
+        @include px2rem(height, 222);
+        background-image: url("../images/7-title.png");
+        @include px2rem(top, 90);
+      }
+      .star {
+        @include px2rem(height, 166);
+        background-image: url("../images/7-star.png");
+        @include px2rem(top, 250);
+      }
+      .sward {
+        @include px2rem(height, 451);
+        background-image: url("../images/7-sward.png");
+        bottom: 0;
+      }
+      .ghost{
+        @include px2rem(height, 612);
+        background-image: url("../images/7-ghost.png");
+        @include px2rem(top, 430);
+      }
+      .content{
+        @include px2rem(height, 131);
+        background-image: url("../images/7-content.png");
+        @include px2rem(top, 1158);
+      }
+      .foot{
+        @include px2rem(height, 578);
+        background-image: url("../images/7-tombstone.png");
+        bottom: 0;
+        z-index: 1;
+        p{
+          position: absolute;
+          @include px2rem(width,810);
+          @include px2rem(height,85);
+          @include px2rem(top,240);
+          @include px2rem(font-size,26);
+          left: 50%;
+          @include px2rem(margin-left,-405);
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+
+    &:nth-child(8) {
+      .title {
+        @include px2rem(height, 206);
+        background-image: url("../images/8-title.png");
+        @include px2rem(top, 90);
+      }
+      .star {
+        @include px2rem(height, 395);
+        background-image: url("../images/8-star.png");
+        @include px2rem(top, 0);
+      }
+      .sward {
+        @include px2rem(height, 462);
+        background-image: url("../images/8-sward.png");
+        bottom: 0;
+        p{
+          position: absolute;
+          @include px2rem(width,920);
+          @include px2rem(height,65);
+          @include px2rem(bottom,155);
+          @include px2rem(font-size,26);
+          left: 50%;
+          @include px2rem(margin-left,-460);
+          color: #fff;
+          text-align: center;
+        }
+      }
+      .ghost{
+        @include px2rem(height, 347);
+        background-image: url("../images/8-ghost.png");
+        @include px2rem(top, 310);
+      }
+      .tombstone{
+        @include px2rem(height, 962);
+        background-image: url("../images/8-hand.png");
+        @include px2rem(bottom, 290);
+        z-index: 1;
+      }
+    }
+
     &:last-child {
       & > div {
         position: absolute;
@@ -554,13 +639,13 @@ li.animated {
 
   // 第一页动画
   .bat {
-    animation: fadeIn 8s, pulse 800ms infinite 2s;
+    animation: fadeIn 2s, pulse 800ms infinite 2s;
   }
 
   // 第二页动画
   .tombstone {
     animation-name: slideInUp;
-    animation-delay: 1s;
+    // animation-delay: 1s;
     animation-duration: 1s;
   }
   .cat {
@@ -645,9 +730,17 @@ li.animated {
     animation-duration: 2s;
   }
 
+  // 第七页动画
+  .ghost{
+    animation: slideInUp 2s, shake 800ms infinite 2s;
+  }
+  .content.li-7{
+    animation: slideInLeft 2s;
+  }
+
   // 最后一页动画
   .spider {
-    animation: slideInUp 8s, flash 800ms infinite 2s;
+    animation: slideInUp 2s, flash 800ms infinite 2s;
   }
   .foot {
     animation-name: slideInUp;
